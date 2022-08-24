@@ -56,11 +56,11 @@ def main():
         )
         eq = element.text
 
-
+        #Takes out the current operator
         equation = eq.split(' ')
         operator = equation.pop(1)
         rop = ''
-        #Switchs the operator to an operator python can use
+        #Switches the operator to an operator python can use
         if operator == '–':
             rop = '-'
         if operator == '+':
@@ -69,9 +69,9 @@ def main():
             rop = '/'
         if operator == '×':
             rop = '*'
-
+        #Inserts an operator python can use
         equation.insert(1, rop)
-
+        
         ev = ' '.join(equation)
     except:
         pass
