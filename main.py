@@ -86,6 +86,7 @@ def main():
 
 while i < 10000000:
     try:
+        #Checks if the game is finished
         element = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, 'left'))
         )
@@ -93,6 +94,7 @@ while i < 10000000:
             e = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CLASS_NAME, 'correct'))
         )
+            #Prints the score to the console
             print(f"""
             ****************************\n
                      {e.text}\n
